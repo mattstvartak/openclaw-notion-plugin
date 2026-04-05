@@ -1,0 +1,30 @@
+{
+  "name": "openclaw-notion-plugin",
+  "version": "1.0.0",
+  "description": "Notion plugin for OpenClaw and Finch -- search, create, and manage pages, databases, and blocks via the Notion API.",
+  "author": "Matt Stvartak <hello@mattstvartak.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/plugin.js",
+  "openclaw": {
+    "extensions": [
+      "./dist/plugin.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.3.0",
+      "gatewayApi": ">=2026.3.0"
+    }
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.49"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
